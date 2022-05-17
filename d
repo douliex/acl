@@ -36,9 +36,9 @@ ruleset=🔗其他,[]FINAL
 custom_proxy_group=☁️代理`select`[]♻️自动`[]DIRECT`.*
 custom_proxy_group=🔗其他`select`[]DIRECT`[]☁️代理`[]🇨🇳直连
 custom_proxy_group=🇨🇳直连`select`[]DIRECT`[]☁️代理
-custom_proxy_group=🖥微软`select`[]♻️自动`[]DIRECT`.*
-custom_proxy_group=🍎苹果`select`[]♻️自动`[]DIRECT`.*
-custom_proxy_group=🎯拦截`select`[]REJECT`[]DIRECT`[]☁️代理
+custom_proxy_group=🖥微软`select`[]DIRECT`[]☁️代理
+custom_proxy_group=🍎苹果`select`[]DIRECT`[]☁️代理
+custom_proxy_group=🎯拦截`select`[]REJECT`[]☁️代理`[]DIRECT
 custom_proxy_group=♻️自动`url-test`.*`http://www.gstatic.com/generate_204`300,,50
 
 enable_rule_generator=true
