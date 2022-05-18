@@ -33,7 +33,7 @@ ruleset=🇨🇳直连,https://ghproxy.com/https://raw.githubusercontent.com/ACL
 ruleset=🇨🇳直连,[]GEOIP,CN
 ruleset=🔗其他,[]FINAL
 
-custom_proxy_group=☁️代理`select`[]♻️自动`[]DIRECT`.*
+custom_proxy_group=☁️代理`select`[]♻️自动`[]💫自动转移`[]DIRECT`.*
 custom_proxy_group=🔗其他`select`[]DIRECT`[]☁️代理`[]🇨🇳直连
 custom_proxy_group=🇨🇳直连`select`[]DIRECT`[]☁️代理
 custom_proxy_group=🖥微软`select`[]DIRECT`[]☁️代理
