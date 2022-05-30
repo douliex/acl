@@ -1,0 +1,44 @@
+[custom]
+;不要随意改变关键字，否则会导致出错
+;acl4SSR规则
+
+;直连
+ruleset=Domestic,https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+;拦截
+ruleset=Advertise,https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+;净化
+ruleset=Advertise,https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+;直连
+ruleset=Domestic,https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+;直连
+ruleset=Domestic,https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+;微软
+ruleset=Microsoft,https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+;苹果
+ruleset=Apple,https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+;外媒
+ruleset=Select Proxy,https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Select ProxyMedia.list
+;self_add
+ruleset=Select Proxy,https://ghproxy.com/https://raw.githubusercontent.com/douliex/acl/main/self_add.list
+;电报
+ruleset=Select Proxy,https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+;代理
+ruleset=Select Proxy,https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Select ProxyLite.list
+;直连
+ruleset=Domestic,https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+;直连
+ruleset=Domestic,https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+;ruleset=Domestic,[]GEOIP,LAN
+ruleset=Domestic,[]GEOIP,CN
+ruleset=Other,[]FINAL
+
+custom_proxy_group=Select Proxy`select`[]Select Auto`[]DIRECT`.*
+custom_proxy_group=Domestic`select`[]DIRECT`[]Select Proxy
+custom_proxy_group=Other`select`[]DIRECT`[]Select Proxy`[]Domestic
+custom_proxy_group=Microsoft`select`[]DIRECT`[]Select Proxy
+custom_proxy_group=Apple`select`[]DIRECT`[]Select Proxy
+custom_proxy_group=Advertise`select`[]REJECT`[]Select Proxy`[]DIRECT
+custom_proxy_group=Select Auto`url-test`.*`http://cp.cloudflare.com`300,,50
+
+enable_rule_generator=true
+overwrite_original_rules=true
